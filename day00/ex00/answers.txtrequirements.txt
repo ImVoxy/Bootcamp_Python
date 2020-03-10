@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    answers.txtrequirements.txt                        :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: alpascal <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/03/09 10:05:17 by alpascal          #+#    #+#              #
+#    Updated: 2020/03/09 10:30:52 by alpascal         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+pip freeze
+pip freeze -V
+pip show numpy
+pip search tesseract
+pip freeze > requirements.txt
