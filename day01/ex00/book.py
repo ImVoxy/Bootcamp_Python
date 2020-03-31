@@ -11,22 +11,24 @@
 # **************************************************************************** #
 
 import time
+from datetime import datetime
 from datetime import date
 from recipe import Recipe
 
 class Book:
-    recipes_list = {
-                    'starter' : {'recipes' : []},
-                    'lunch' : {'recipes' : []},
-                    'dessert' : {'recipes' : []}
-                    }
 
     def __init__(self, name):
-        self.last_update = date.today()
+        self.recipes_list = {
+                          'starter' : {'recipes' : []},
+                          'lunch' : {'recipes' : []},
+                          'dessert' : {'recipes' : []}
+                        }
+        self.last_update = datetime.now()
         self.creation_date = date.today()
         self.name = name
 
     def add_recipe(self, recipe):
+        self.last_update = datetime.now()
         newRecipe = Recipe(recipe)
         while 1:
             f = input('Type an ingredient >>')
@@ -62,5 +64,6 @@ class Book:
                 break
             else:
                 print('Please, enter a valid key')
-        print(self.recipes_list['lunch']['recipes'])
-        print(self.recipes_list['lunch'][recipe].ingredients)
+
+
+#       print(livre.recipes_list['lunch']['recipes'][0].description)

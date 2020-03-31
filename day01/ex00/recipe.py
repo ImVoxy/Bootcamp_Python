@@ -22,5 +22,5 @@ class Recipe:
     def add_ingredient(self, ingredient):
         self.ingredients.append(ingredient)
     def __str__(self):
-        txt = ""
+        txt = '{}:\n\n\t{}\n\nFor this recipe, you will need:\n{}\nCook it {} minutes at level {}.\nThat\'s it ! Your {} is ready !'.format(self.name, self.description, self.ingredients, self.cooking_time, self.cooking_lvl, self.recipe_type, self.name)
         return txt
